@@ -1,2 +1,3 @@
 # studyNode
-this is a studying with nodejs
+
+Code snippets from everyday life
