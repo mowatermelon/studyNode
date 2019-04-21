@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <link rel="Stylesheet" type="text/css" href="./static/css/style.css">
+        <link rel="Stylesheet" type="text/css" href="./static/css/tango.css">
+        <link rel="Stylesheet" type="text/css" href="./static/css/github-markdown.css">
+        <title>啦啦啦啦啦</title>
+    </head>
+
+    <body>
+
+        <div id="home">
+            <div id="container">
+                <div id="blog_title"></div>
+                <div id="index">
+                    <image id="wait" src="./static/images/wait.gif" class="aligncenter"></image>
+                    <ul id="post_list"></ul>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="page">
+            <div id="container">
+                <div id="header">
+                    <div id="post-nav">
+                        <a href="/">Home</a>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div id="title"></div>
+                <div id="content" class="markdown-body">
+                    <image id="wait" src="./static/images/wait.gif" class="aligncenter"></image>
+                </div>
+                <div id="comment">
+                </div>
+            </div>
+        </div>
+
+        <div id="footer"></div>
+    </body>
+    <script src="./static/js/utils/ajax.js"></script>
+    <script src="./static/js/libs/config.js"></script>
+    <script src="./static/js/utils/util.js"></script>
+    <script src="./static/js/libs/app.js"></script>
+    <script type="text/javascript">
+        var id = parseInt(loadPageVar("p"));
+        if (id) {
+            hideElement("home");
+            showElement("page");
+            gotoPage(id);
+        } else {
+            hideElement("page");
+            showElement("home");
+            gotoHome();
+        }
+    </script>
+
+</html>
+
